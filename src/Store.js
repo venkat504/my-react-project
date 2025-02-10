@@ -62,8 +62,19 @@ const productSlice = createSlice({
             { name: "Hatsun", price: 500, image: "Hatsun.jpeg" },
             { name: "Vishaaka", price: 700, image: "Vishaaka.jpeg" },
             { name: "Sangam", price: 200, image: "Sangam.jpeg" },
-            { name: "SriKrishna", price: 1500, image: "SriKrishna.jpeg" }
+            { name: "SriKrishna", price: 1500, image: "SriKrishna.jpeg" },
+            { name: "Aavin", price: 600, image: "Aavin.jpeg" },
+            { name: "Heritage", price: 550, image: "Heritage.jpeg" },
+            { name: "MilkyMist", price: 750, image: "MilkyMist.jpeg" },
+            { name: "Amul", price: 650, image: "Amul.jpeg" },
+            { name: "Nandini", price: 480, image: "Nandini.jpeg" },
+            { name: "MotherDairy", price: 700, image: "MotherDairy.jpeg" },
+            { name: "Gokul", price: 530, image: "Gokul.jpeg" },
+            { name: "Parag", price: 680, image: "Parag.jpeg" },
+            { name: "Vijaya", price: 720, image: "Vijaya.jpeg" },
+            { name: "Dynamix", price: 560, image: "Dynamix.jpeg" }
         ]
+        
     },
     reducers: {}
 });

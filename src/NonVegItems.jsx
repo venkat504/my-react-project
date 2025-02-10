@@ -10,7 +10,7 @@ function NonVegItems() {
 
     const [category, setCategory] = useState(null); // Default null to allow deselection
     const [pageNumber, setPageNumber] = useState(1);
-    const perPage = 3;
+    const perPage = 6;
 
     // Filter items based on price
     let filteredItems = nonVegItems;
