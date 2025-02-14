@@ -8,7 +8,7 @@ const Home = () => {
 
     // Define category data with images
     const categories = [
-        { name: "Vegetables", image: "/Vegetables.jpeg", route: "/Veg" },
+        { name: "Veg", image: "/Vegetables.jpeg", route: "/Veg" },
         { name: "Non-Veg", image: "/nonveg.jpeg", route: "/nonVeg" },
         { name: "Milk Products", image: "/milk.jpeg", route: "/milk" }
     ];
@@ -19,7 +19,7 @@ const Home = () => {
 
     return (
         <Container className="text-center mt-5">
-            <h1 className="display-4 fw-bold text-primary">Welcome to Our Store</h1>
+            <h1 className="display-4 fw-bold text-primary">Welcome to Our SpeedyBites</h1>
             <p className="lead text-secondary mt-3">Choose a category to explore our fresh products.</p>
 
             {/* Category Menu */}

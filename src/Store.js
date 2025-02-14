@@ -58,23 +58,22 @@ const productSlice = createSlice({
             { name: "Shrimp", price: 600, image: "Shrimp.jpeg" }
         ],
         milk: [
-            { name: "Jercy", price: 400, image: "Jercy.jpeg" },
-            { name: "Hatsun", price: 500, image: "Hatsun.jpeg" },
-            { name: "Vishaaka", price: 700, image: "Vishaaka.jpeg" },
-            { name: "Sangam", price: 200, image: "Sangam.jpeg" },
-            { name: "SriKrishna", price: 1500, image: "SriKrishna.jpeg" },
-            { name: "Aavin", price: 600, image: "Aavin.jpeg" },
-            { name: "Heritage", price: 550, image: "Heritage.jpeg" },
-            { name: "MilkyMist", price: 750, image: "MilkyMist.jpeg" },
-            { name: "Amul", price: 650, image: "Amul.jpeg" },
-            { name: "Nandini", price: 480, image: "Nandini.jpeg" },
-            { name: "MotherDairy", price: 700, image: "MotherDairy.jpeg" },
-            { name: "Gokul", price: 530, image: "Gokul.jpeg" },
-            { name: "Parag", price: 680, image: "Parag.jpeg" },
-            { name: "Vijaya", price: 720, image: "Vijaya.jpeg" },
-            { name: "Dynamix", price: 560, image: "Dynamix.jpeg" }
+            { name: "Jercy", price: 40, image: "Jercy.jpeg" },
+            { name: "Hatsun", price: 50, image: "Hatsun.jpeg" },
+            { name: "Vishaaka", price: 70, image: "Vishaaka.jpeg" },
+            { name: "Sangam", price: 80, image: "Sangam.jpeg" },
+            { name: "SriKrishna", price: 150, image: "SriKrishna.jpeg" },
+            { name: "Aavin", price: 60, image: "Aavin.jpeg" },
+            { name: "Heritage", price: 55, image: "Heritage.jpeg" },
+            { name: "MilkyMist", price: 75, image: "MilkyMist.jpeg" },
+            { name: "Amul", price: 65, image: "Amul.jpeg" },
+            { name: "Nandini", price: 48, image: "Nandini.jpeg" },
+            { name: "MotherDairy", price: 70, image: "MotherDairy.jpeg" },
+            { name: "Gokul", price: 53, image: "Gokul.jpeg" },
+            { name: "Parag", price: 68, image: "Parag.jpeg" },
+            { name: "Vijaya", price: 72, image: "Vijaya.jpeg" },
+            { name: "Dynamix", price: 56, image: "Dynamix.jpeg" }
         ]
-        
     },
     reducers: {}
 });
@@ -127,7 +126,7 @@ const purchaseDetailsSlice = createSlice({
 const authSlice = createSlice({
     name: "auth",
     initialState: {
-        isAuthenticated: localStorage.getItem("username") ? true : false,
+        isAuthenticated: localStorage.getItem("username"),
         user: localStorage.getItem("username") || " ",
     },
     reducers: {
@@ -139,7 +138,7 @@ const authSlice = createSlice({
         logout: (state) => {
             state.isAuthenticated = false;
             state.user = " ";
-            localStorage.setItem("username", "");
+            localStorage.removeItem("username");
         }
     }
 });

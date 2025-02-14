@@ -14,10 +14,10 @@ function Milk() {
 
     // Filter items based on price
     let filteredItems = milkItems;
-    if (category === "below500") {
-        filteredItems = milkItems.filter(item => item.price < 500);
-    } else if (category === "above500") {
-        filteredItems = milkItems.filter(item => item.price >= 500);
+    if (category === "below50") {
+        filteredItems = milkItems.filter(item => item.price < 50);
+    } else if (category === "above50") {
+        filteredItems = milkItems.filter(item => item.price >= 50);
     }
 
     const totalPages = Math.ceil(filteredItems.length / perPage);
@@ -41,19 +41,19 @@ function Milk() {
                 <ToggleButtonGroup type="radio" name="priceFilter" value={category}>
                     <ToggleButton 
                         variant="outline-success" 
-                        id="below500" 
-                        value="below500" 
-                        onClick={() => handleCategoryChange("below500")}
+                        id="below50" 
+                        value="below50" 
+                        onClick={() => handleCategoryChange("below50")}
                     >
-                        Below ₹500
+                        Below ₹50
                     </ToggleButton>
                     <ToggleButton 
                         variant="outline-danger" 
-                        id="above500" 
-                        value="above500" 
-                        onClick={() => handleCategoryChange("above500")}
+                        id="above50" 
+                        value="above50" 
+                        onClick={() => handleCategoryChange("above50")}
                     >
-                         Above ₹500
+                         Above ₹50
                     </ToggleButton>
                 </ToggleButtonGroup>
             </div>

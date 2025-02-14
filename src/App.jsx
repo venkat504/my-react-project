@@ -14,6 +14,7 @@ import store, { logout } from "./store";
 import { Provider } from "react-redux";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Navbar, Nav, Button } from 'react-bootstrap';
+import PageNotFound from "./pagenotfound";
 
 function App() {
   const cart = useSelector(state => state.cart);
@@ -62,6 +63,7 @@ function App() {
         <Container fluid className="vh-100">
           <Routes>
             <Route path="/Home" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/Veg" element={<VegItems />} />
             <Route path="/nonVeg" element={<NonVegItems />} />
             <Route path="/milk" element={<Milk />} />
@@ -70,6 +72,7 @@ function App() {
             <Route path="/aboutUs" element={<AboutUs />} />
             <Route path="/contactUs" element={<Contact />} />
             <Route path="/login" element={<LoginComponent />} />
+            <Route path="*" element={<PageNotFound/>} />
           </Routes>
         </Container>
       </BrowserRouter>

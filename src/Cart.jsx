@@ -8,6 +8,7 @@ import { Container, Row, Col, ListGroup, Button, Form, Image } from 'react-boots
 function Cart() {
     const dispatch = useDispatch();
     const cartItems = useSelector(state => state.cart);
+    const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
 
     const finalItems = cartItems.map((item) => (
         <ListGroup.Item key={item.id || `${item.name}-${item.price}`}>
@@ -69,6 +70,23 @@ function Cart() {
         dispatch(addPurchaseDetails(purchaseDetails));
         dispatch(clearCart());
     };
+    const handleCompletePurchaseitems = () => {
+        if (!isAuthenticated) {
+            alert("You are not logged in. Please login to complete your purchase.");
+            return;
+        }
+        
+        const purchaseDate = new Date().toLocaleDateString();
+        const purchaseDetails = {
+            date: purchaseDate,
+            items: [...cartItems],
+            totalPrice: totalPrice
+        };
+        dispatch(addPurchaseDetails(purchaseDetails));
+        dispatch(clearCart());
+        alert("Purchase completed successfully!");
+    };
+
 
     return (
         <Container>
@@ -113,7 +131,7 @@ function Cart() {
                     <div className="mb-3">
                         <Button variant="success" size="sm" onClick={() => { handleCouponPercentage(); setShowCouponDiscount(true); }}>Apply Coupon Code</Button>
                     </div>
-                    <Button variant="success" onClick={handleCompletePurchase}>Complete Purchase</Button>
+                    <Button variant="success" onClick={handleCompletePurchaseitems}>Complete Purchase</Button>
                 </div>
             ) : (
                 <p>Cart is empty</p>

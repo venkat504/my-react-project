@@ -24,7 +24,7 @@ function LoginComponent() {
         <Container className="mt-5">
             <Row className="justify-content-center"> {/* Center the card */}
             <h1>Login Page</h1>
-                <Col xs={12} sm={8} md={6} lg={4}> {/* Adjust column sizes for responsiveness */}
+                <Col xs={10} sm={15} md={15} lg={15}> {/* Adjust column sizes for responsiveness */}
                     <Card>
                         <Card.Body>
                             
