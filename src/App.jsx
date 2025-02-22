@@ -26,7 +26,7 @@ function App() {
   const dispatch = useDispatch();
 
   return (
-    <Provider store={store}>
+      
       <BrowserRouter>
         <Navbar className="bg-primary w-100 fixed-top" expand="lg" variant="dark" style={{ zIndex: 1000 }}>
           <Container>
@@ -76,7 +76,6 @@ function App() {
           </Routes>
         </Container>
       </BrowserRouter>
-    </Provider>
   );
 }
 
